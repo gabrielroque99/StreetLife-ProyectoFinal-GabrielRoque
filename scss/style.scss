@@ -1,0 +1,373 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+$font-family: 'Roboto', sans-serif;
+$primary-color: rgb(248, 228, 237);
+$background-color: rgb(222, 161, 233);
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  background-color: black;
+  background-image: url("../assets/images/fondo.jpg.jpg");
+  background-size: cover;
+  background-position: center right;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 150px;
+  font-size: 1.25rem;
+
+  h1 {
+    font-family: $font-family;
+    text-decoration: none;
+    color: $primary-color;
+    letter-spacing: 2px;
+  }
+}
+
+.navbar {
+  display: flex;
+  list-style-type: none;
+  gap: 1.25rem;
+  padding-right: 1.25rem;
+  list-style: none;
+
+  li a {
+    text-decoration: none;
+    color: $primary-color;
+  }
+}
+
+main {
+  background-color: $background-color;
+}
+
+.flexm, .buzos, .pantalones {
+  background-color: $background-color;
+  box-shadow: 2px 2px 5px black;
+  display: flex;
+  border-radius: 0.625rem;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center; // Centrar horizontalmente
+  text-align: center;
+  
+  font-family: $font-family;
+  font-size: 16px;
+
+  img {
+    width: 17rem;
+    height: 23.125rem;
+    box-shadow: 2px 2px 5px black;
+    border-radius: 0.625rem;
+    object-fit: cover;
+  }
+}
+
+.cards-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center; // Centrar horizontalmente las cards
+  gap: 1.25rem;
+
+  .card {
+    width: calc(33.333% - 1rem);
+    height: 23.125rem;
+    border: 0.0625rem solid $background-color;
+    background-color: lightcoral;
+    box-shadow: 2px 2px 5px black;
+    border-radius: 0.625rem;
+    margin: 0.625rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+  
+    .imgm1,
+    .imgm2,
+    .imgm3,
+    .imgm4 {
+      max-height: 60%; // Ajusta la altura máxima de la imagen dentro de la card
+      overflow: hidden;
+    }
+  
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+      border-radius: 0.625rem 0.625rem 0 0;
+    }
+  
+    h2, p {
+      text-align: center;
+      padding: 1rem;
+      margin: 0;
+    }
+  }
+  .card, .w {
+    width: calc(50% - 0.625rem);
+    border: 0.0625rem solid rgb(222, 161, 233);
+    background-color: lightcoral;
+    box-shadow: 2px 2px 5px black;
+    border-radius: 0.625rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+  
+    .imgw1,
+    .imgw2 {
+      max-height: 60%;
+      overflow: hidden;
+    }
+  
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+      border-radius: 0.625rem 0.625rem 0 0;
+    }
+  
+    h2, p {
+      text-align: center;
+      padding: 1rem;
+      margin: 0;
+    }
+  }
+
+}
+.flexf {
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start; // Alinea los elementos al principio de su sección
+    padding: 2rem 0; // Espaciado vertical para mejorar la estética
+  
+    section {
+      flex: 1;
+      padding: 0 1rem; // Agrega un poco de espacio a los lados de cada sección
+      text-align: center;
+  
+      h3 {
+        margin-bottom: 1rem;
+      }
+  
+      p {
+        margin-bottom: 2rem;
+      }
+  
+      .media {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+  
+        a {
+          display: inline-block;
+          margin: 0 1rem; // Espacio entre los iconos
+          img {
+            width: 2rem; // Ajusta el tamaño de las imágenes de los iconos
+            height: 2rem;
+          }
+        }
+      }
+    }
+  
+    .maps {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+  
+      a {
+        img {
+          width: 2rem; // Ajusta el tamaño del icono de mapa
+          height: 2rem;
+        }
+      }
+    }
+  }
+  // Estilos generales
+
+@media (max-width: 1440px) {
+    // Ajustes para 1440px
+    header {
+      font-size: 18px;
+    }
+  
+    .navbar {
+      gap: 0.5rem;
+    }
+  
+    footer {
+      flex-direction: column;
+    }
+  
+    .Contacto,
+    .Encontranos,
+    .Preguntas {
+      margin-bottom: 1rem;
+      text-align: center; // Centrar el texto
+    }
+  
+    .media {
+      display: flex;
+      justify-content: center;
+      align-items: center; // Centrar los íconos verticalmente
+    }
+  
+    .media a {
+      margin: 0 0.5rem;
+    }
+  }
+  
+  @media (max-width: 1024px) {
+    // Ajustes para 1024px
+    header {
+      font-size: 16px;
+    }
+  
+    .navbar {
+      gap: 0.3rem;
+      flex-direction: row;
+    }
+  
+    .navbar li {
+      margin: 0.5rem 0;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    // Ajustes para 768px
+    header {
+      font-size: 15px;
+      height: 50%;
+      display: flex;  // Cambio a flex para colocar elementos en fila
+      flex-direction: row;
+      align-items: center; // Centrar elementos horizontalmente
+    }
+  
+    .navbar {
+      gap: 0.3125rem;
+    }
+  
+    .galeria {
+      grid-template-columns: repeat(1, 1fr);
+      grid-template-rows: repeat(3, 1fr);
+      grid-template-areas: "div1" "div2" "div3";
+      gap: 1.25rem;
+  
+      div img {
+        width: 80%;
+        height: 250px;
+        object-fit: contain;
+      }
+    }
+  
+    .cards-container .card {
+      width: calc(50% - 1rem);
+    }
+    footer {
+        flex-direction: column;
+        align-items: center;
+      }
+  }
+  
+  @media (max-width: 425px) {
+    // Ajustes para 425px
+    header {
+      font-size: 14px;
+      height: auto;
+    }
+  
+    .navbar {
+      flex-direction: column;
+      gap: 0.5rem;
+    }
+  
+    .navbar li {
+      margin: 0.3rem 0;
+      text-align: center;
+    }
+  
+    .navbar a {
+      padding: 0.3rem;
+    }
+  
+    .galeria {
+      grid-template-columns: repeat(1, 1fr);
+      grid-template-rows: repeat(3, auto);
+      gap: 1rem;
+    }
+  
+    .galeria div img {
+      width: 100%;
+      height: auto;
+    }
+  
+    .cards-container .card {
+      width: 100%;
+      margin-bottom: 1rem;
+    }
+  
+    footer {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .Contacto,
+    .Encontranos,
+    .Preguntas {
+      margin-bottom: 1rem;
+      text-align: center;
+    }
+  
+    .media {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+  
+    .media a {
+      margin: 0.3rem;
+    }
+  }
+  
+  @media (max-width: 320px) {
+    // Ajustes para 320px
+    header {
+      font-size: 13px;
+    }
+  
+    .navbar {
+      gap: 0.2rem;
+    }
+  
+    .navbar li {
+      margin: 0.2rem 0;
+    }
+  
+    .galeria {
+      grid-template-columns: repeat(1, 1fr);
+      grid-template-rows: repeat(3, auto);
+      gap: 1rem;
+    }
+  
+    .cards-container .card {
+      width: 100%;
+    }
+  
+    .media a {
+      margin: 0.2rem;
+    }
+    footer {
+        flex-direction: column;
+        align-items: center;
+      }
+  }
+  
+  
+  
+
