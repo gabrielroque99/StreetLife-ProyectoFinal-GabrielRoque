@@ -143,8 +143,9 @@ main {
 }
 .flexf {
     display: flex;
-    justify-content: space-around;
-    align-items: flex-start; // Alinea los elementos al principio de su sección
+    background-color:rgb(222, 161, 233); 
+    justify-content: center;
+    align-items: center; // Alinea los elementos al principio de su sección
     padding: 2rem 0; // Espaciado vertical para mejorar la estética
   
     section {
