@@ -35,6 +35,7 @@ header {
 .cardsindex {
   width: 100%;
   display: flex;
+  flex-direction: row;
   align-items: center;
   justify-content: space-evenly;
   list-style: none;
@@ -294,7 +295,12 @@ form {
     gap: 0.3rem;
     flex-direction: row; }
   .navbar li {
-    margin: 0.5rem 0; } }
+    margin: 0.5rem 0; }
+  .cardsindex {
+    display: flex;
+    flex-direction: column; }
+    .cardsindex .card-buzos, .cardsindex .card-pantalones {
+      width: 100%; } }
 
 @media (max-width: 768px) {
   header {
@@ -304,24 +310,48 @@ form {
     flex-direction: row;
     align-items: center; }
   .navbar {
-    gap: 0.3125rem; }
-  .galeria {
-    gap: 0.625rem; }
-    .galeria .div1 .div1image,
-    .galeria .div1 .div2image,
-    .galeria .div1 .div3image,
-    .galeria .div2 .div1image,
-    .galeria .div2 .div2image,
-    .galeria .div2 .div3image,
-    .galeria .div3 .div1image,
-    .galeria .div3 .div2image,
-    .galeria .div3 .div3image {
-      width: 100%;
-      height: 10rem; }
+    gap: 0.3125rem;
+    flex-direction: column; }
+  .cardsindex {
+    display: flex;
+    flex-direction: column; }
+    .cardsindex .card-buzos, .cardsindex .card-pantalones {
+      width: 100%; }
+  .flexm .galeria {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(3, 1fr);
+    grid-template-areas: "div1" "div2" "div3"; }
+    .flexm .galeria .div1,
+    .flexm .galeria .div2,
+    .flexm .galeria .div3 {
+      order: initial;
+      text-align: center;
+      justify-content: center;
+      align-items: center; }
+      .flexm .galeria .div1 .div1image,
+      .flexm .galeria .div1 .div2image,
+      .flexm .galeria .div1 .div3image,
+      .flexm .galeria .div2 .div1image,
+      .flexm .galeria .div2 .div2image,
+      .flexm .galeria .div2 .div3image,
+      .flexm .galeria .div3 .div1image,
+      .flexm .galeria .div3 .div2image,
+      .flexm .galeria .div3 .div3image {
+        width: 100%;
+        height: 12.5rem;
+        overflow: hidden;
+        border-radius: 0.625; }
   .cards-container .card {
     width: calc(50% - 1rem); }
   footer {
     flex-direction: column;
+    align-items: center; }
+  form fieldset legend, form fieldset label, form fieldset button {
+    display: flex;
+    flex-direction: column;
+    font-size: 14px;
+    justify-content: center;
     align-items: center; } }
 
 @media (max-width: 425px) {
@@ -352,7 +382,13 @@ form {
     justify-content: center;
     flex-wrap: wrap; }
   .media a {
-    margin: 0.3rem; } }
+    margin: 0.3rem; }
+  form fieldset legend, form fieldset label, form fieldset button {
+    display: flex;
+    flex-direction: column;
+    font-size: 10px;
+    justify-content: center;
+    align-items: center; } }
 
 @media (max-width: 320px) {
   header {
@@ -367,4 +403,10 @@ form {
     margin: 0.2rem; }
   footer {
     flex-direction: column;
+    align-items: center; }
+  form fieldset legend, form fieldset label, form fieldset button {
+    display: flex;
+    flex-direction: column;
+    font-size: 8px;
+    justify-content: center;
     align-items: center; } }

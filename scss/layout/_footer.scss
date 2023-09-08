@@ -1,0 +1,48 @@
+.flexf {
+    display: flex;
+    background-color:rgb(222, 161, 233); 
+    justify-content: row;
+    align-items: space ; // Alinea los elementos al principio de su sección
+    padding: 2rem 0; // Espaciado vertical para mejorar la estética
+    background-image: url(https://images.unsplash.com/photo-1488239585740-f5be6038763f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1472&q=80);
+    section {
+    flex: 1;
+    padding: 0 1rem; // Agrega un poco de espacio a los lados de cada sección
+    text-align: center;
+    color:$font-color;
+    font-family: $font-family;
+      h3 {
+      margin-bottom: 1rem;
+      }
+      p {
+      margin-bottom: 2rem;
+      }
+    
+      .media {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+        a {
+        display: inline-block;
+        margin: 0 1rem; // Espacio entre los iconos
+          img {
+          width: 2rem; // Ajusta el tamaño de las imágenes de los iconos
+          height: 2rem;
+          }
+        }
+      }
+    
+    
+      .maps {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+        a {
+          img {
+          width: 2rem; // Ajusta el tamaño del icono de mapa
+          height: 2rem;
+          }
+        }
+      }
+    }
+  }
