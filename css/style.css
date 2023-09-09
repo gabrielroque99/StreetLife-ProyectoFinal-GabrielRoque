@@ -65,7 +65,7 @@ header {
         width: 100%;
         height: 37.5rem;
         object-fit: contain;
-        border-radius: 0.625rem; }
+        border-radius: 0.625rem 0.625rem 0.625rem 0.625rem; }
     .cardsindex .card-buzos .infoi1, .cardsindex .card-buzos .infoi2, .cardsindex .card-pantalones .infoi1, .cardsindex .card-pantalones .infoi2 {
       display: flex;
       flex-direction: column;
@@ -386,7 +386,7 @@ form {
   form fieldset legend, form fieldset label, form fieldset button {
     display: flex;
     flex-direction: column;
-    font-size: 10px;
+    font-size: 12px;
     justify-content: center;
     align-items: center; } }
 
@@ -407,6 +407,6 @@ form {
   form fieldset legend, form fieldset label, form fieldset button {
     display: flex;
     flex-direction: column;
-    font-size: 8px;
+    font-size: 12px;
     justify-content: center;
     align-items: center; } }
