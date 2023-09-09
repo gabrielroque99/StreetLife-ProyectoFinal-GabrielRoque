@@ -1,0 +1,20 @@
+@media (max-width: 1024px) {
+    // Ajustes para 1024px
+    header {
+      font-size: 16px;
+    }
+   .navbar {
+      gap: 0.3rem;
+      flex-direction: row;
+    }
+   .navbar li {
+      margin: 0.5rem 0;
+    }
+    .cardsindex{
+      display: flex;
+      flex-direction: column;
+      .card-buzos, .card-pantalones {
+        width: 100%; 
+      }
+    }
+  }

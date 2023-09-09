@@ -1,0 +1,26 @@
+@media (max-width: 1440px) {
+    // Ajustes para 1440px
+      header {
+        font-size: 18px;
+      }
+      .navbar {
+        gap: 0.5rem;
+      } 
+      footer {
+        flex-direction: column;
+      }
+      .Contacto,
+      .Encontranos,
+      .Preguntas {
+        margin-bottom: 1rem;
+        text-align: center; // Centrar el texto
+      } 
+      .media {
+        display: flex;
+        justify-content: center;
+        align-items: center; // Centrar los íconos verticalmente
+      }  
+      .media a {
+        margin: 0 0.5rem;
+      }
+    }
